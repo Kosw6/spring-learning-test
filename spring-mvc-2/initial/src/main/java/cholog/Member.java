@@ -1,5 +1,7 @@
 package cholog;
 
+import java.util.Objects;
+
 public class Member {
     private Long id;
     private String name;
@@ -39,4 +41,15 @@ public class Member {
         this.name = newMember.name;
         this.age = newMember.age;
     }
+
+    @Override
+    public String toString() {
+        return "Member{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
 }
+
