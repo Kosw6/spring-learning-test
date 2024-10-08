@@ -30,6 +30,9 @@ public class ManyToOneTest {
         Book book = new Book("책", publisher);
         entityManager.persist(book);
 
+        publisher.addBook(book);
+        entityManager.flush();
+        entityManager.clear();
         Book persistBook = entityManager.find(Book.class, book.getId());
 
         assertThat(persistBook).isNotNull();

@@ -56,7 +56,6 @@ public class RepositoryTest {
     void delete() {
         entityManager.persist(new Customer("Jack", "Bauer"));
         entityManager.persist(new Customer("Chloe", "O'Brian"));
-
         customerRepository.deleteById(1L);
         assertThat(customerRepository.count()).isEqualTo(1);
     }
